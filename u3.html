@@ -1,0 +1,35 @@
+<html>
+    <head>    
+          <link rel ="stylesheet"
+    href ="style2.css">
+    </head>
+    <script>
+        function select(btn) {
+         btn.style.backgroundColor="red"
+         btn.style.color="white"
+        }
+        function deselect(btn) { 
+        btn.style.backgroundColor="white"
+        btn.style.color="black"
+        }
+         function newName(){
+         let name = localStorage.getItem("n"); // Get stored name
+         let heading= document.getElementById("h1");
+  heading.innerText = heading.innerText.replace("user", name);
+  }
+  function Alert()
+  {
+      alert("Entry Kyun Liya Jab Dekhna Hi Nhi Tha 😡😡, Ab Toh Dekhke Hi Exit Milega")
+  }
+    </script>
+    <body onLoad="newName()">
+          <img src="8.webp">
+       <p><h1 id="h1">user</h1></p>
+       <p>Okay Okay, Now seriously<br>
+       Are u ready to see my work</p>
+ <div class="container">
+   <a href ="u3.html"><button id ="btn1"
+   onClick="Alert()" ontouchstart="select(btn1)" ontouchend="deselect(btn1)">No</button></a>
+<a href ="u4.html"><button id ="btn2" ontouchstart="select(btn2)" ontouchend="deselect(btn2)">Yes</button></a></div>
+</body>
+</html>

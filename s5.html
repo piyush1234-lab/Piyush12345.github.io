@@ -1,0 +1,49 @@
+<html>
+    <head>
+    </head>
+       <link rel ="stylesheet" href="style.css">
+</style>
+    <script>
+        function select(btn) {
+         btn.style.backgroundColor="red"
+       btn.style.color="white"
+        }
+        function deselect(btn) { 
+        btn.style.backgroundColor="white"
+       btn.style.color="black"
+        }
+       function random(btn) {
+  // Set how far the button should move
+  const moveRange = 400;
+
+  // Get the button’s current position
+  const currentLeft = btn.offsetLeft;
+  const currentTop = btn.offsetTop;
+
+  // Create a random number between -50 and +50
+  const moveX = Math.random() * moveRange - moveRange / 2;
+  const moveY = Math.random() * moveRange - moveRange / 2;
+
+  // Calculate new position
+  const newLeft = currentLeft + moveX;
+  const newTop = currentTop + moveY;
+
+  // Make sure the button stays inside the screen
+  const maxLeft = 400 - btn.offsetWidth;
+  const maxTop = 400 - btn.offsetHeight;
+
+  // Keep it in bounds
+  btn.style.left = Math.max(0, Math.min(newLeft, maxLeft)) + "px";
+  btn.style.top = Math.max(0, Math.min(newTop, maxTop)) + "px";
+}
+    </script>
+          <img src="5.webp">
+        <p><h1>Ab Maan Bhi Jaa,</h1></p>
+ <p>yes bolna </p>
+     <div class name="heart"></div>
+ <div class="container" id="c1">
+ <a href ="piyush.html"><button id ="btn1" ontouchstart="select(btn1)" ontouchend="deselect(btn1)">Yes</button></a>
+<button id ="btn2" style="position:absolute;" ontouchstart="select(btn2)";
+onClick="random(btn2)" onMouseOver="random(btn2)"; onMouseOver="random(btn2)" ontouchend="deselect(btn2)">No</button></div>
+</body>
+</html>

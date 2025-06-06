@@ -1,0 +1,138 @@
+<html>
+    <head>         
+        <style>
+             body {
+    background-color: pink;
+}
+p{
+    font-family: arial, sans-serif;
+    font-size : 20px;
+    Font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 300px;
+    
+}
+h1{
+    text-align: center;
+    position: relative;
+    top:250px;
+}
+#btn1{
+    font-family: arial, sans-serif;
+    color: white;
+    font-size : 20px;
+    Font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    background-color: White;
+    box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-image: URL(https://media2.giphy.com/media/ZkwbvaFT7ZaAU/giphy.gif?cid=6c09b952cxs7kiuubfcfuktb56c2rihcvkbs1qd5q2gzlwf2&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    top:260px;
+    left:440px;
+    
+}
+img {
+    position: relative;
+    left: 380px;
+    top: 250px;
+    height: auto;
+    width: 200px;
+    display:flex;
+    z-index: 999;
+    }
+input {
+    width: 250px;
+    height: 30px;
+box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.7);
+    font-family: arial, sans-serif;
+    font-size : 15px;
+    font-weight: bold;
+    text-align: center;
+    position:relative;
+    top:260px;
+    left:360px;
+}
+#f {
+    font-family: arial, sans-serif;
+    font-size : 12px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    display:flex;
+    margin: 10 auto;
+    top: 260px;
+    text-shadow: 2px px 10px red;
+    
+}
+         </style>
+    </head>
+    <body onLoad="blink()">
+    <img src="tkthao219-bubududu.webp"">
+        <h1>please enter your name to proceed</h1>
+ <input id="UID" type="text" placeholder="*Only First Name">
+ <span id ="f">*Plz Enable Desktop Site In Your Browser For Better Experience</span>
+<button id ="btn1" type="button" onClick="login()">Let's Go</button>
+<script>
+    function login() {
+        let UID = document.getElementById("UID");
+        let nameInput = UID.value.trim();
+        let name = nameInput.split(/\s+/)[0];  // only first name
+
+        if (UID.value=="")
+            {
+            alert("enter your name");
+            return;
+                }
+                localStorage.setItem("n", name);
+            if(UID.value=="Sneha")
+            { 
+            document.location="s0.html"
+            }
+            else if(UID.value=="Sneha Singh")
+            { 
+            document.location="s0.html"
+            }
+            else if(UID.value=="Sneha singh")
+            { 
+            document.location="s0.html"
+            }
+            else if(UID.value=="sneha singh")
+            { 
+            document.location="s0.html"
+            }
+            else if(UID.value=="sneha")
+            { 
+            document.location="s0.html"
+            }
+            else
+            {
+            document.location="u1.html"
+            }
+            }
+        function blink()
+{
+if(f.style.visibility=="visible")
+{
+f.style.visibility="hidden"
+}
+else
+{
+f.style.visibility="visible"
+}
+setTimeout("blink()",1000)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+    <head>    
+          <style>
+              body {
+    background-color: pink;
+}
+p{
+    font-family: arial, sans-serif;
+    font-size : 20px;
+    Font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 220px;
+    
+}
+h1{
+    text-align: center;
+    position: relative;
+    top: 240px;
+}
+.container{
+    font-family: arial, sans-serif;
+    font-size : 20px;
+    Font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    gap: 50px;
+    position: relative;
+    top: -40px;
+}
+#c1{
+    left:-40px;
+}
+#btn2{
+      font-family: arial, sans-serif;
+    font-size : 20px;
+    Font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    background-color: White;
+    margin-left: 30px;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    top: 250px;
+    left: -15px;
+}
+img {
+    position: relative;
+    left: 355px;
+    top: 250px;
+    height: 200px;
+    width: auto;
+    display:flex;
+    
+}
+input {
+    width: 250px;
+    height: 30px;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.7);
+    font-family: arial, sans-serif;
+    font-size : 15px;
+    font-weight: bold;
+    text-align: center;
+}
+          </style>
+    </head>
+    <script>
+        function select(btn) {
+         btn.style.backgroundColor="red"
+         btn.style.color="white"
+        }
+        function deselect(btn) { 
+        btn.style.backgroundColor="white"
+        btn.style.color="black"
+        }
+         function newName(){
+         let name = localStorage.getItem("n"); // Get stored name
+         let heading= document.getElementById("h1");
+  heading.innerText = heading.innerText.replace("user", name);
+  }
+    </script>
+    <body onLoad="newName()">
+          <img src="9.webp">
+       <p><h1 id="h1">user</h1></p>
+       <p>You Are Just A Final Click Away</p>
+ <div class="container">
+<a href ="piyush1.html"><button id ="btn2" ontouchstart="select(btn2)" ontouchend="deselect(btn2)">Let's Enter</button></a></div>
+</body>
+</html>
