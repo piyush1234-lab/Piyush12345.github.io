@@ -78,9 +78,7 @@ let pwd = document.getElementById("pwd");
      }
      else
      {
-         alert(`wrong name or password!
-         
-         After correcting, if page still not opening then this is not for you`);
+         alert("wrong name or password!\n After correcting, if page still not opening then this is not for you");
   }
   function deselect() {
     let btn1 = document.getElementById("btn1");
