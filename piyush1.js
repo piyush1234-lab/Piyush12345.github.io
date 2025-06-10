@@ -1,10 +1,14 @@
 function select() {
          b1.style.backgroundColor="red"
          b1.style.color="white"   
+         b2.style.backgroundColor="red"
+         b2.style.color="white"   
         }
         function deselect() { 
-       b1.style.backgroundColor="frosted white"
+       b1.style.backgroundColor="rgba(255, 255, 255, 0.3)"
        b1.style.color="black"
+       b2.style.backgroundColor="rgba(0, 0, 0, 0.3)"
+       b2.style.color="white"
         }
     const d2 = document.getElementById("d2");
 const b1 = document.getElementById("b1");
@@ -44,14 +48,15 @@ const seconds = audioDuration/1000;
   const finalMessage = document.getElementById("finalMessage");
   finalMessage.style.display = "block";
   finalMessage.style.animation = "fadeIn 2s forwards";
+  b2.style.display = "block";
 }, 22000); // 24s for scroll + buffer = 25s
 };
-      function newName(){
+function newName(){
          let name = localStorage.getItem("n"); // Get stored name
          let heading= document.getElementById("h4");
   heading.innerText = heading.innerText.replace("user", name);
-let final= document.getElementById("finalMessage");
-  final.innerText = final.innerText.replace("user", name);
+let finalMessage= document.getElementById("finalMessage");
+  finalMessage.innerText = finalMessage.innerText.replace("user", name);
   let d =
   document.getElementById("d");
   d.innerText=
@@ -79,4 +84,4 @@ function fadeAudioOut(audio, duration) {
       clearInterval(fadeOut);
     }
   }, interval);
-  }
+}
