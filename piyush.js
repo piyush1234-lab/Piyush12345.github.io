@@ -1,10 +1,14 @@
 function select() {
          b1.style.backgroundColor="red"
          b1.style.color="white"   
+         b2.style.backgroundColor="red"
+         b2.style.color="white"   
         }
         function deselect() { 
-       b1.style.backgroundColor="frosted white"
+       b1.style.backgroundColor="rgba(255, 255, 255, 0.3)"
        b1.style.color="black"
+       b2.style.backgroundColor="rgba(0, 0, 0, 0.3)"
+       b2.style.color="white"
         }
     const d2 = document.getElementById("d2");
 const b1 = document.getElementById("b1");
@@ -46,6 +50,7 @@ const seconds = audioDuration/1000;
   finalMessage.style.animation = "fadeIn 2s forwards";
 }, 23000); // 24s for scroll + buffer = 25s
 };
+
 function fadeAudioIn(audio, duration) {
   let step = 0.01;
   let interval = duration / (1 / step);
@@ -57,7 +62,6 @@ function fadeAudioIn(audio, duration) {
     }
   }, interval);
 }
-
 function fadeAudioOut(audio, duration) {
   let step = 0.01;
   let interval = duration / (1 / step);
@@ -68,4 +72,4 @@ function fadeAudioOut(audio, duration) {
       clearInterval(fadeOut);
     }
   }, interval);
-  }
+}
