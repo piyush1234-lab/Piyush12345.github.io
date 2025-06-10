@@ -64,7 +64,7 @@ let pwd = document.getElementById("pwd");
         "Sneha singh"
     ];
 
-      if (allowedNames.includes(in2.value) && pwd.value=="Sneh@2004")
+      if (allowedNames.includes(in2.value) && pwd.value=="Sneha@1234")
       { 
           document.location="cube1.html"
       }
@@ -78,7 +78,8 @@ let pwd = document.getElementById("pwd");
      }
      else
      {
-         alert("wrong name or password!\n After correcting, if page still not opening then this is not for you");
+         alert("wrong name or password!               \n\nAfter correcting if page still not opening then this is not for you")
+     }
   }
   function deselect() {
     let btn1 = document.getElementById("btn1");
