@@ -64,7 +64,7 @@ let pwd = document.getElementById("pwd");
         "Sneha singh"
     ];
 
-      if (allowedNames.includes(in2.value) && pwd.value=="Sneha@1234")
+      if (allowedNames.includes(in2.value) && pwd.value=="Sneha@2004")
       { 
           document.location="cube1.html"
       }
