@@ -1,6 +1,6 @@
 <html>
     <head>         
-        <style>
+      <style>
              body {
     background-color: pink;
 }
@@ -12,7 +12,7 @@ p{
     text-align: center;
     position: relative;
     top: 300px;
-    
+
 }
 h1{
     text-align: center;
@@ -39,7 +39,7 @@ h1{
     position:relative;
     top:260px;
     left:440px;
-    
+
 }
 img {
     position: relative;
@@ -74,22 +74,22 @@ box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.7);
     margin: 10 auto;
     top: 260px;
     text-shadow: 2px px 10px red;
-    
+
 }
 #f1 {
     font-family: arial, sans-serif;
     font-size : 15px;
     color: red;
     font-weight: bold;
-    text-align: justify;
+    text-align: left;
     position: relative;
     width: fit-content;
-    display:flex;
+    display:block;
     margin: 10 auto;
-    top: 450px;
+    top: 400px;
     text-shadow: 2px px 10px red;
-    
-    
+
+
 }
          </style>
     </head>
@@ -99,44 +99,27 @@ box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.7);
  <input id="UID" type="text" placeholder="*Only First Name">
  <span id ="f">*Plz Enable Desktop Site In Your Browser For Better Experience</span>
 <button id ="btn1" type="button" onClick="login()">Let's Go</button>
-<span id ="f1">
-   NOTE: <br><br><br>
-   1. Try To Proceed Till End.<br><br>
-   2. None Of Your Provided Data Like Name, And Password Will Be Saved.<br><br>
-   3. Best Thing Is Specially Waiting For Special Persons At The End With Password Protected.<br><br>
-   4. The Password Is Already Provided To The Special Persons.<br><br>
-   5. Your Feedback Will Help Me To Create More Pages Like This.<br><br>
-   6. If You Do Really Like My Work Plz DM Me With The Feedback.
- </span>
+<span id="f1">
+  1. Some Portion has been Updated for valentine week.<br><br>
+  2. None Of Your Provided Data Like Name will save.<br><br>
+  3. it is recommended to open this in laptop or PC.<br><br>
+  4. Watch till end and enjoy.<br><br>
+  5. <strong><u>soon the updated portion will be reset to the previous one.</u></strong><br><br>
+</span>
+
 <script>
     function login() {
         let UID = document.getElementById("UID");
-        let nameInput = UID.value.trim();
-        let name = nameInput.split(/\s+/)[0];  // only first name
-
-        if (UID.value=="")
+        let checkValue = UID.value.trim().toLowerCase();
+        let name = checkValue.split(/\s+/)[0];  // only first name
+        let allowedUsers = ["sneha", "sneha singh"];
+        if (checkValue=="")
             {
             alert("enter your name");
             return;
                 }
                 localStorage.setItem("n", name);
-            if(UID.value=="Sneha")
-            { 
-            document.location="s0.html"
-            }
-            else if(UID.value=="Sneha Singh")
-            { 
-            document.location="s0.html"
-            }
-            else if(UID.value=="Sneha singh")
-            { 
-            document.location="s0.html"
-            }
-            else if(UID.value=="sneha singh")
-            { 
-            document.location="s0.html"
-            }
-            else if(UID.value=="sneha")
+             if (allowedUsers.includes(checkValue))
             { 
             document.location="s0.html"
             }
