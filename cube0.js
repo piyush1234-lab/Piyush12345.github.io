@@ -7,7 +7,7 @@ const CONFIG = {
         userAll: "All@1234"
     },
     pages: {
-        cube1: "cube1.html",
+        cube1: "letter.html",
         cube2: "cube2.html",
         cube3: "cube3.html"
     }
