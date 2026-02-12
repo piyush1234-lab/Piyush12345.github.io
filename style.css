@@ -89,7 +89,7 @@ input {
 .bottom-box {
     text-align: center;
     position: relative;
-    top: 250px; /* Pushes this section below the Yes/No buttons */
+    top: 350px; /* Pushes this section below the Yes/No buttons */
 }
 
 /* Overriding the global 'p' style for this specific text */
