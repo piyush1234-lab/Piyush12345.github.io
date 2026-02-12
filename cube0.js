@@ -90,14 +90,17 @@ function login() {
 
     // Logic 1: Sneha Login
     if (CONFIG.targetNames.includes(inputLower) && password === CONFIG.passwords.main) {
+    sessionStorage.setItem("access_granted", "true")
         window.location.href = CONFIG.pages.cube1;
     } 
     // Logic 2: Stored User (Edit Access)
     else if (storedName && inputVal === storedName && password === CONFIG.passwords.userEdit) {
+    sessionStorage.setItem("access_granted", "true")
         window.location.href = CONFIG.pages.cube2;
     }
     // Logic 3: Stored User (All Access)
     else if (storedName && inputVal === storedName && password === CONFIG.passwords.userAll) {
+    sessionStorage.setItem("access_granted", "true")
         window.location.href = CONFIG.pages.cube3;
     } 
     // Error Handling
