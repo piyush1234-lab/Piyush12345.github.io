@@ -85,3 +85,36 @@ input {
     font-weight: bold;
     text-align: center;
 }
+/* Container for the new section */
+.bottom-box {
+    text-align: center;
+    position: relative;
+    top: 250px; /* Pushes this section below the Yes/No buttons */
+}
+
+/* Overriding the global 'p' style for this specific text */
+.new-text {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    /* Resetting the top position so it stays inside the bottom-box */
+    top: 0px !important; 
+    margin-bottom: 10px;
+}
+
+/* Styling for the new button */
+#btn3 {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    background-color: White;
+    box-shadow: 0.5rem 1rem 3rem hsl(0, 0%, 0%, 0.3);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
