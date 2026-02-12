@@ -88,6 +88,18 @@ function login() {
     const inputLower = inputVal.toLowerCase();
     const password = pwdEl.value.trim();
 
+if (inputVal === "") {
+    alert("Please provide the Username");
+    inputEl.focus();
+    return;
+}
+
+if (password === "") {
+    alert("Please provide the Password.");
+    pwdEl.focus();
+    return;
+}
+
     // Logic 1: Sneha Login
     if (CONFIG.targetNames.includes(inputLower) && password === CONFIG.passwords.main) {
     sessionStorage.setItem("access_granted", "true")
@@ -105,7 +117,7 @@ function login() {
     } 
     // Error Handling
     else {
-        alert("Wrong name or password! \n\nIf the page still doesn't open after correcting it, you may not have access.");
+        alert("Wrong name or password! \n\nIf the page still doesn't open after correcting it, you may not have access to it.");
     }
 }
 
