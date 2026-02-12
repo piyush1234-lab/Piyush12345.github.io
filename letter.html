@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>Valentine Day Surprise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href ="letter.css">
+</head>
+<body>
+<div id="entrance-overlay">
+    <div class="entrance-msg">I have a surprise for you...</div>
+    <button id="enter-btn" onclick="enterSite()">Tap to Open</button>
+</div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="container">
+        <button class="bb" id="b" onclick="flipEnvelope(); colorchange(b)" ontouchstart="colorchange(b)" ontouchend="colorchange2(b)">click to Open</button> 
+        <div id="ddd"><strong>To,</strong><br>Sneha Singh</div>
+        <div id="ddd1"><strong>From -</strong><br> Piyush Agarwal</div>
+        <div id="stamp"></div>
+        
+        <button class="bb" id="b1" onclick="openEnvelope(); colorchange(b1)" ontouchstart="colorchange(b1)" ontouchend="colorchange2(b1)">click to read</button>
+        
+        <div class="envelope" id="envelope">
+            <div class="flaps" id="flappy">
+                <div class="flap" id="flap1"></div>       
+            </div>
+            <div class="b" id="heart">❤</div>
+            <div class="flap" id="flap2"></div>
+            <div class="flap" id="flap3"></div>
+            <div class="flap" id="flap4"></div>
+            <div class="body" id="bod"></div>
+            
+            <div id="messageBox">
+                <div id="letter1" style="text-align:center;">
+                    <button class="bb" id="b2" onclick="colorchange(b2); openletter()" ontouchstart="colorchange(b2)" ontouchend="colorchange2(b2)">click to read</button>
+                    <p><b>Hii Sneha,</b></p><br>
+                    
+                    <p class="p2" id="p1">I know <span style="background: linear-gradient(to right, #ff95BE, #ff407E); -webkit-text-stroke:0.01px black">"Valentine Day"</span> can be a bit of a cliché, but it feels like the perfect excuse to finally put this into writing.</p>
+                    <p class="p2" id="p2">
+                  You already know how I feel about you—I’m terrible at hiding it anyway. You are the person I look for in every crowded room, and my days are just genuinely brighter when we talk.</p>
+                    <p class="p2" id="p3">I don't want to just be "almost" something anymore. I want to be the one who gets to make you feel <span style="background: linear-gradient(to right, #ff95BE, #ff407E); -webkit-text-stroke:0.01px black">special</span>, today and every day after.</p>
+                    <p class="p2" id="p4">one Last Thing - <br>
+                    So, I’m asking you today very seriously can we date each other, can we makeout together, God knows what's in the destiny but can't we actually try on. <span style="background: linear-gradient(to right, #fff8b0, #ffd6ec, #d6fff5, #ffefcc); color: black; padding: 4px 10px; border-radius: 10px; font-weight: bold; text-shadow: 0px 5px 15px red;"><strong><u>"Do You Wanna Date Me"</u>??</strong></span></p>
+                    <p id="p0"><b>From,<br>Piyush Agarwal</b></p>
+                </div>
+
+                             <form id="loveForm" action="https://formsubmit.co/sagarwal2k20@gmail.com" method="POST">
+  <!-- Hidden input to store Yes or No -->
+  <input type="hidden" name="answer" id="answer">
+
+  <!-- Optional: redirect after submission -->
+  <input type="hidden" name="_next" value="https://piyush1234-lab.github.io/Piyush12345.github.io/redirect.html">
+  <!-- Disable Captcha -->
+<input type="hidden" name="_captcha" value="false">
+
+<!-- Custom email subject -->
+<input type="hidden" name="_subject" value="Sneha Responded To Your Question of valentine day">
+
+  <!-- Yes and No buttons -->
+  <button type="button" class="bb" id="b3" onclick="call(); submitAnswer('Yes')" ontouchstart="call()" ontouchend="call1()">
+    YES
+  </button>
+
+  <button type="button" class="bb" id="b4" onclick="uncall(); submitAnswer('No')" ontouchstart="uncall()" ontouchend="uncall1()">
+    NO
+  </button>
+</form>      
+            </div>
+        </div>
+    </div>
+    <script src="letter script(GL).js"></script>
+    <script src="letter script(envelop).js"></script>
+</body>
+</html>
