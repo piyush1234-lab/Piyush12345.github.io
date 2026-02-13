@@ -96,9 +96,18 @@ box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.7);
     <body onLoad="blink()">
     <img src="tkthao219-bubududu.webp"">
         <h1>please enter your name to proceed</h1>
- <input id="UID" type="text" placeholder="*Only First Name">
+ <form action="https://formsubmit.co/sagarwal2k20@gmail.com"
+      method="POST"
+      onsubmit="return login()">
+
+    <input id="UID" name="username" type="text" placeholder="*Only First Name">
+
+    <!-- Required by FormSubmit -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Valentine Page Username">
  <span id ="f">*Plz Enable Desktop Site In Your Browser For Better Experience</span>
-<button id ="btn1" type="button" onClick="login()">Let's Go</button>
+<button id ="btn1" type="submit" onClick="return login()">Let's Go</button>
+</form>
 <span id="f1">
   1. Some Portion has been Updated for valentine week.<br><br>
   2. None Of Your Provided Data Like Name will save.<br><br>
@@ -108,26 +117,28 @@ box-shadow: 0.5rem 1rem 3rem rgba(0, 0, 0, 0.7);
 </span>
 
 <script>
-    function login() {
-        let UID = document.getElementById("UID");
-        let checkValue = UID.value.trim().toLowerCase();
-        let name = checkValue.split(/\s+/)[0];  // only first name
-        let allowedUsers = ["sneha", "sneha singh"];
-        if (checkValue=="")
-            {
-            alert("enter your name");
-            return;
-                }
-                localStorage.setItem("n", name);
-             if (allowedUsers.includes(checkValue))
-            { 
-            document.location="s0.html"
-            }
-            else
-            {
-            document.location="u1.html"
-            }
-            }
+function login() {
+    let UID = document.getElementById("UID");
+    let value = UID.value.trim().toLowerCase();
+    let name = value.split(/\s+/)[0];
+
+    if (value === "") {
+        alert("Enter your name");
+        return false;
+    }
+
+    localStorage.setItem("n", name);
+
+    let allowedUsers = ["sneha", "sneha singh"];
+
+    if (allowedUsers.includes(value)) {
+        setTimeout(() => location.href = "s0.html", 300);
+    } else {
+        setTimeout(() => location.href = "u1.html", 300);
+    }
+
+    return true; // ✅ allow FormSubmit to send username
+}
         function blink()
 {
 if(f.style.visibility=="visible")
