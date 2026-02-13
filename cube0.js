@@ -1,13 +1,13 @@
 // Centralized configuration for easier editing
 const CONFIG = {
-    targetNames: ["her name"], // distinct names (lowercase)
+    targetNames: ["sneha", "sneha singh"], // distinct names (lowercase)
     passwords: {
-        main: "Piyush@1234", // as u want
+        main: "Sneha@1234",
         userEdit: "Editz@1234",
         userAll: "All@1234"
     },
     pages: {
-        cube1: "letter1.html",
+        cube1: "letter.html",
         cube2: "cube2.html",
         cube3: "cube3.html"
     }
