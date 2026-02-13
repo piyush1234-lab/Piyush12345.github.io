@@ -1,13 +1,13 @@
 // Centralized configuration for easier editing
 const CONFIG = {
-    targetNames: ["sneha", "sneha singh"], // distinct names (lowercase)
+    targetNames: ["her name"], // distinct names (lowercase)
     passwords: {
-        main: "Sneha@1234",
+        main: "Piyush@1234", // as u want
         userEdit: "Editz@1234",
         userAll: "All@1234"
     },
     pages: {
-        cube1: "letter.html",
+        cube1: "letter1.html",
         cube2: "cube2.html",
         cube3: "cube3.html"
     }
@@ -21,7 +21,7 @@ function check() {
     const inputEl = document.getElementById("in2");
     const spanEl = document.getElementById("spn");
     const storedName = localStorage.getItem("n");
-    
+
     const inputValue = inputEl.value.trim();
     const inputLower = inputValue.toLowerCase();
 
@@ -70,7 +70,7 @@ function graph() {
 function newName() {
     const storedName = localStorage.getItem("n");
     const input = document.getElementById("in2");
-    
+
     if (storedName && input.value.includes("user")) {
         input.value = input.value.replace("user", storedName);
     }
